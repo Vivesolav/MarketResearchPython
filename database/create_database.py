@@ -1,29 +1,26 @@
 import sqlite3
 
-def create_database():
-    conn = sqlite3.connect('questions.db')  
+try:
+    conn = sqlite3.connect('questions.db')
     cursor = conn.cursor()
 
-    # Questions table
-    cursor.execute('''
-    CREATE TABLE IF NOT EXISTS questions (
-        id INTEGER PRIMARY KEY AUTOINCREMENT,
-        question TEXT
-    )
-    ''')
+    cursor.execute("DROP TABLE IF EXISTS questions")
 
-    # Anwers atble
     cursor.execute('''
-    CREATE TABLE IF NOT EXISTS answers (
+    CREATE TABLE questions (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
-        question_id INTEGER,
-        answer TEXT,
-        timestamp DATETIME DEFAULT CURRENT_TIMESTAMP,
-        FOREIGN KEY(question_id) REFERENCES questions(id)
+        question_text TEXT NOT NULL,
+        category TEXT NOT NULL
     )
     ''')
 
     conn.commit()
-    conn.close()
 
-create_database()
+    print("Table 'questions' created successfully!")
+
+except sqlite3.Error as e:
+    print(f"An error occurred: {e}")
+
+finally:
+    if conn:
+        conn.close()
