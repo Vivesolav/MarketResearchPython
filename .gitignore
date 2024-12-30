@@ -1,0 +1,10 @@
+venv/
+
+*.db
+
+__pycache__/
+*.pyc
+
+settings.ini
+.env
+ 
