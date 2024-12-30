@@ -11,7 +11,6 @@ if not os.path.exists(DB_PATH):
 
 RAPPORT_FOLDER = 'Reports'
 
-# Ensure the report folder exists
 os.makedirs(RAPPORT_FOLDER, exist_ok=True)
 
 class SurveyApp:
@@ -21,12 +20,10 @@ class SurveyApp:
         self.answers = []
 
     def get_questions(self):
-        """Retrieve all questions from the database."""
         self.cursor.execute("SELECT question_text, category FROM questions")
         return self.cursor.fetchall()
 
     def ask_questions(self):
-        """Ask each question and store answers."""
         print("\nStarting the survey. Please answer each question.\n")
         questions = self.get_questions()
         for question, category in questions:
@@ -34,7 +31,7 @@ class SurveyApp:
             self.answers.append((question, category, answer))
 
     def generate_csv_report(self):
-        """Generate a CSV report with all answers."""
+        #Generate a CSV report with all answers.
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
         report_filename = f"report_{timestamp}.csv"
         report_path = os.path.join(RAPPORT_FOLDER, report_filename)
@@ -48,7 +45,6 @@ class SurveyApp:
         print(f"File location: {os.path.abspath(report_path)}")
 
     def close(self):
-        """Close the database connection."""
         self.conn.close()
 
 
