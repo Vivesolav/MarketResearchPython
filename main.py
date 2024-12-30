@@ -4,7 +4,11 @@ import os
 from datetime import datetime
 
 # Database configuration
-DB_PATH = 'database/question.db'
+DB_PATH = os.path.join(os.path.dirname(__file__), 'database', 'questions.db')
+
+if not os.path.exists(DB_PATH):
+    raise FileNotFoundError(f"Database not found at {DB_PATH}")
+
 RAPPORT_FOLDER = 'Reports'
 
 # Ensure the report folder exists

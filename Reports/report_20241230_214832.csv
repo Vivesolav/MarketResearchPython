@@ -1,0 +1,20 @@
+Question,Category,Answer
+What is your firstname?,Personal,olav
+What is your secondname?,Personal,gryson
+What did you study?,Personal,it
+What is your current job?,Personal,none
+Why would you choose a desktop over a laptop?,Advantage,performane
+What are the disadvantages of using a desktop?,Disadvantage,price
+What do you primarily use your computer for?,Usage,gaming
+How many hours a day do you use your computer?,Usage,4
+Do you require specific software that performs better on a desktop than on a laptop?,Usage,yes
+What is your budget for a computer?,Cost,1100 euro
+Do you think a desktop is more cost-efficient than a laptop in the long run?,Cost,yes!!
+Do you use an external keyboard with your current device?,External Devices,yes
+Do you use an external monitor with your current device?,External Devices,yes
+How important is ergonomics to you?,External Devices,very
+How important is portability in a computer for you?,Mobility,sometimes
+Do you often need to use your computer in different locations?,Mobility,yes
+Would you prefer your computer to always stay in one fixed location?,Mobility,no
+How important is the ability to upgrade your device in the future?,Performance,very
+Which components do you consider most important for good performance?,Performance,"cpu, gpu, memory"
