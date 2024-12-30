@@ -1,50 +1,44 @@
-# Desktop vs Laptop: Een Vergelijkende Analyse
+# Desktop vs Laptop: A Comparative Analysis
 
 -Basic info
 
-Dit project is een command-line applicatie die gebruikers vragen stelt over waarom ze een desktop boven een laptop zouden kiezen. De antwoorden worden opgeslagen in een SQLite-database en kunnen geëxporteerd worden naar een CSV- of Excel-rapport.
+This project is a command-line application that asks users questions about why they would choose a desktop over a laptop. The answers are stored in a SQLite database and can be exported to a CSV or Excel report.
 
-#Acties
+#Actions
 
-- Vragenlijst via de terminal.
-- Opslag van gebruikersantwoorden in een SQLite-database.
-- Mogelijkheid om rapporten te genereren in CSV- of Excel-formaat.
-- Gebruik van klassen voor een overzichtelijke structuur.
+- Questionnaire via the terminal.
+- Storage of user answers in an SQLite database.
+- Ability to generate reports in CSV or Excel format.
+- Use of classes for a clear structure.
 
+#Installation
+1. Clone the repository:
+https://github.com/Vivesolav/MarketResearchPython.git
 
-#Installatie
-1. Clone de repository:
-   https://github.com/Vivesolav/MarktonderzoekPython.git
+2. Create a virtual environment:
+python -m venv venv
 
+3. Activate the virtual environment:
+-.venv/Scripts/activate.bat (automatically provided)
 
-2. Maak een virtuele omgeving:
-   python -m venv venv
-   
-3. Activeer de virtuele omgeving:
-   -.venv/Scripts/activate.bat (automatisch gegeven)
+4. Install the requirements:
 
+pip install -r requirements.txt
 
-4. Installeer de vereisten:
+cd database
+python create_database.py
+python insert_database.py
 
-   pip install -r requirements.txt
+#Launch the application
+Launch the application from the terminal:
 
+python main.py
 
-   cd database
-   python create_database.py
-   python insert_database.py 
+Follow the instructions to answer questions and generate reports.
 
-#Applicatie starten
-Start de applicatie vanuit de terminal:
-
-   python main.py
-
-Volg de instructies om vragen te beantwoorden en rapporten te genereren.
-
-
-#Rapporten
-De gegenereerde rapporten worden opgeslagen in de map `reports/`.
+#Reports
+The generated reports are saved in the `reports/` folder.
 
 #Credits
-Auteur: Olav Gryson-Modaert  
+Author: Olav Gryson-Modaert
 Email: olav.grysonmodaert@studen.vives.be
- 
